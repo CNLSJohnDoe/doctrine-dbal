@@ -1428,7 +1428,7 @@ class Connection implements DriverConnection
      *
      * @throws Exception
      */
-    public function query()
+    public function query($statement, $mode = PDO::ATTR_DEFAULT_FETCH_MODE, ...$fetch_mode_args)
     {
         Deprecation::trigger(
             'doctrine/dbal',
