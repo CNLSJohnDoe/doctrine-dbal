@@ -26,7 +26,7 @@ interface Connection
      *
      * @return Statement
      */
-    function query($statement, $mode = PDO::ATTR_DEFAULT_FETCH_MODE, ...$fetch_mode_args);
+    public function query($query, $fetchMode = PDO::ATTR_DEFAULT_FETCH_MODE, $arg3 = null, $ctorargs = []);
 
     /**
      * Quotes a string for use in a query.
